@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tasks Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Font Awesome Cdn Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html" class="logo">
+              <img src="images/logo.jpeg" alt="logo" />
+              <span class="nav-item">Dashboard</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="tasks.html"
+              ><i class="fas fa-tasks"></i>
+              <span class="nav-item">Tasks</span></a
+            >
+          </li>
+
+          <li>
+            <a href=""
+              ><i class="fas fa-chart-bar"></i>
+              <span class="nav-item">Analytics</span></a
+            >
+          </li>
+          <li>
+            <a href=""
+              ><i class="fas fa-user"></i>
+              <span class="nav-item">Profile</span></a
+            >
+          </li>
+          <li>
+            <a href=""
+              ><i class="fas fa-cog"></i>
+              <span class="nav-item">Settings</span></a
+            >
+          </li>
+          <li>
+            <a href="" class="logout"
+              ><i class="fas fa-sign-out-alt"></i>
+              <span class="nav-item">Logout</span></a
+            >
+          </li>
+        </ul>
+      </nav>
+      <section class="main">
+        <div class="main-top">
+          <!-- <h2>Add a Task</h2> -->
+          <i class="fas fa-user-cog"></i>
+        </div>
+        <div class="task-form">
+          <h3>Add a task</h3>
+          <span class="small">All fields are mandatory</span>
+          <form action="/submit_task" method="post">
+            <div class="row">
+              <div class="col-25">
+                <label for="personnel_number">Personnel Number:</label>
+              </div>
+              <div class="col-75">
+                <input
+                  type="number"
+                  id="personnel_number"
+                  name="personnel_number"
+                  placeholder="Personnel Number"
+                  required
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="officer_name">Officer Name:</label>
+              </div>
+              <div class="col-75">
+                <input
+                  type="text"
+                  id="officer_name"
+                  name="officer_name"
+                  placeholder="Officer Name"
+                  required
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="task_description">Task Description:</label>
+              </div>
+              <div class="col-75">
+                <input
+                  type="text"
+                  id="task_description"
+                  name="task_description"
+                  placeholder="Task Description"
+                  required
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="task_classification">Task Classification:</label>
+              </div>
+              <div class="col-75">
+                <select
+                  name="task_classification"
+                  id="task_classification"
+                  required
+                >
+                  <option value="blank"></option>
+                  <option value="medium">Medium</option>
+                  <option value="major">Major</option>
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="task_category">Task Category:</label>
+              </div>
+              <div class="col-75">
+                <select name="task_category" id="task_category" required>
+                  <option value="blank"></option>
+                  <option value="enhancement">System Enhancement</option>
+                  <option value="bug">Bug</option>
+                  <option value="service">Service Request</option>
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="affected_application">Affected Application:</label>
+              </div>
+              <div class="col-75">
+                <input
+                  type="text"
+                  id="affected_application"
+                  name="affected_application"
+                  placeholder="iSUPPORT"
+                  required
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="date_lodged">Date Lodged:</label>
+              </div>
+              <div class="col-75">
+                <input
+                  type="date"
+                  id="date_lodged"
+                  name="date_lodged"
+                  required
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="task_status">Task Status:</label>
+              </div>
+              <div class="col-75">
+                <select name="task_status" id="task_status" required>
+                  <option value="on-going"></option>
+                  <option value="closed">CLOSED</option>
+                  <option value="pending">PENDING</option>
+                  <option value="cancelled">CANCELLED</option>
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="date_closed">Date Closed:</label>
+              </div>
+              <div class="col-75">
+                <input
+                  type="date"
+                  id="date_closed"
+                  name="date_closed"
+                  required
+                />
+              </div>
+            </div>
+            <br />
+            <div class="col-submit">
+              <input type="submit" value="Submit" />
+            </div>
+          </form>
+        </div>
+        <!-- <section class="main-course"></section> -->
+      </section>
+    </div>
+  </body>
+</html>
